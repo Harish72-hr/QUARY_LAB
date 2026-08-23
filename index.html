@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUARY LAB</title>
+    <meta
+      name="description"
+      content="Interactive DBMS learning website covering relational model, SQL, joins, transactions, constraints and database administration."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-badge">DB</div>
+          <div>
+            <h1>QUARY LAB</h1>
+            <p class="brand-tagline">Learn. Explore. Query. Master.</p>
+          </div>
+        </div>
+
+        <nav class="side-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-action="open-home">
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item" data-action="open-chapter" data-chapter="1">
+            <span>Chapter 1</span>
+            <small>Intro to DBMS</small>
+          </button>
+          <button class="nav-item" data-action="open-chapter" data-chapter="2">
+            <span>Chapter 2</span>
+            <small>Relational Model</small>
+          </button>
+          <button class="nav-item" data-action="open-chapter" data-chapter="3">
+            <span>Chapter 3</span>
+            <small>SQL</small>
+          </button>
+          <button class="nav-item" data-action="open-chapter" data-chapter="4">
+            <span>Chapter 4</span>
+            <small>Advanced SQL</small>
+          </button>
+          <button class="nav-item" data-action="open-final-quiz">
+            <span>Final Quiz</span>
+            <small>Assessment</small>
+          </button>
+        </nav>
+
+        <div class="sidebar-panel">
+          <p class="panel-label">Progress</p>
+          <div class="progress-ring-wrap">
+            <div class="progress-ring" id="sidebar-progress-ring">
+              <span id="sidebar-progress-label">0%</span>
+            </div>
+          </div>
+          <div class="mini-stats">
+            <div>
+              <span id="completed-topics-count">0</span>
+              <small>Topics</small>
+            </div>
+            <div>
+              <span id="completed-chapters-count">0</span>
+              <small>Chapters</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+            <input
+              id="topic-search"
+              type="search"
+              placeholder="Search topics, SQL, keys, joins..."
+              aria-label="Search topics"
+            />
+          </div>
+
+          <div class="topbar-actions">
+            <button id="theme-toggle" class="secondary-btn theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-icon" aria-hidden="true">☀</span>
+              <span class="theme-label">Dark mode</span>
+            </button>
+          </div>
+        </header>
+
+        <div id="app-content"></div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
