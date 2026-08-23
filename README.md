@@ -1,2 +1,2 @@
-# QUARY_LAB
+# QUERY_LAB
 Learn. Explore. Query. Master
